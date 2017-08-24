@@ -1,7 +1,24 @@
 <template name="tasklist">
-    <ul>
-        {{#each task}}
-        <li>{{name}}</li>
-        {{/each}}
-    </ul>
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            {{#each task}}
+            <div class="row">
+
+                <div class="col-xs-11">
+
+                    {{name}}
+
+                </div>
+                <div class="col-xs-1">
+                    <button class="btn btn-danger">excluir</button>
+                </div>
+
+            </div>
+            <hr>
+            {{/each}}
+        </div>
+    </div>
+
 </template>
