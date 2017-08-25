@@ -23,7 +23,7 @@ Template.tasklist.events({
 
         var task = this;
         
-        Tasks.remove({_id: task._id});
+        Meteor.call("deleteTask", task._id);
 
     }
 

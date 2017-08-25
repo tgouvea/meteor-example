@@ -6,7 +6,8 @@ Template.saveForm.events({
         var input = $("#task");
         var name = input.val();
 
-        Tasks.insert({name: name, date: new Date()});
+        Meteor.call("saveTask", {name: name})
+        
         input.val("");
     }
 
