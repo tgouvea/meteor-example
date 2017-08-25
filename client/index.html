@@ -16,7 +16,7 @@
 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-
+                    {{> loginButtons}}
                 </ul>
             </div>
 
@@ -26,9 +26,12 @@
 
     <main class="container">
 
-        {{> saveForm}}
-        {{> tasklist}}
-
+        {{#if currentUser}}
+            {{> saveForm}}
+            {{> tasklist}}
+        {{else}}
+            No authenticated
+        {{/if}}
     </main>
 
 </body>
