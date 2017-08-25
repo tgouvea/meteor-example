@@ -14,4 +14,18 @@ Template.tasklist.helpers({
     }
 
 
-})
+});
+
+
+Template.tasklist.events({
+
+    "click #buttonDelete" : function(e, template){
+
+        var task = this;
+        
+        Tasks.remove({_id: task._id});
+
+    }
+
+
+});
